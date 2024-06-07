@@ -4,7 +4,7 @@ from class_bot import MyBot
 from utils.db_api.database import DataBase
 from config import TOKEN, db_name, user, password, host
 from aiogram.client.session.aiohttp import AiohttpSession
-
+import os
 
 
 bot = Bot(token=TOKEN)
