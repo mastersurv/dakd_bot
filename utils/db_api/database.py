@@ -25,7 +25,7 @@ class DataBase:
         )
 
     async def execute_query(self, query, *args):
-        if self.conn is None:
+        if self.conn is None or self.conn.is_closed():
             await self.connect()
         result = await self.conn.fetch(query, *args)
         return result
